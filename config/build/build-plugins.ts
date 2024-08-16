@@ -1,5 +1,5 @@
 import HTMLWebpackPlugin from 'html-webpack-plugin';
-import {ProgressPlugin, DefinePlugin} from 'webpack';
+import {ProgressPlugin, DefinePlugin, HotModuleReplacementPlugin} from 'webpack';
 import {BuildOptions} from './types/config';
 
 export function buildPlugins({paths, isDev}: BuildOptions) {
@@ -11,5 +11,6 @@ export function buildPlugins({paths, isDev}: BuildOptions) {
 		new DefinePlugin({
 			__IS_DEV__: JSON.stringify(isDev),
 		}),
+		new HotModuleReplacementPlugin(),
 	];
 }
