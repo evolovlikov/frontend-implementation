@@ -1,10 +1,10 @@
 import {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 import './styles/index.scss';
-import {useTheme} from './theme/use-theme';
-import {AboutPageAsync} from './pages/about-page/about-page.async';
-import {MainPageAsync} from './pages/main-page/main-page.async';
-import {classNames} from './helpers/classNames/classNames';
+import {AboutPageAsync} from 'pages/about-page/about-page.async';
+import {MainPageAsync} from 'pages/main-page/main-page.async';
+import {classNames} from 'shared/lib/classnames/classNames';
+import {useTheme} from './providers/theme-provider';
 
 const App = () => {
 	const {theme, toggleTheme} = useTheme();
