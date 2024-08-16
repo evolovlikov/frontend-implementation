@@ -1,11 +1,11 @@
-import webpack from 'webpack';
-import {BuildOptions} from './types/config';
+import {BuildOptions, Configuration} from './types/config';
 import {buildPlugins} from './build-plugins';
 import {buildLoaders} from './build-loaders';
 import {buildResolvers} from './build-resolvers';
+import {buildDevServer} from './build-dev-server';
 
-export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-	const {paths, mode} = options;
+export function buildWebpackConfig(options: BuildOptions): Configuration {
+	const {paths, mode, isDev} = options;
 
 	return {
 		mode,
@@ -20,5 +20,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
 			rules: buildLoaders(),
 		},
 		resolve: buildResolvers(),
+		devtool: isDev ? 'inline-source-map' : undefined,
+		devServer: isDev ? buildDevServer(options) : undefined,
 	};
 }
