@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {ThemeSwitcher} from 'shared/ui/theme-switcher';
 import {LangSwitcher} from 'shared/ui/lang-switcher/lang-switcher';
 import {Button} from 'shared/ui/button/button';
-import cls from './Sidebar.module.scss';
+import cls from './sidebar.module.scss';
 
 interface SidebarProps {
 	className?: string;
@@ -17,7 +17,7 @@ export const Sidebar = ({className}: SidebarProps) => {
 	};
 
 	return (
-		<div data-testid="sidebar" className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
+		<div data-testid="sidebar" className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [className])}>
 			<Button data-testid="sidebar-toggle" onClick={onToggle}>
 				toggle
 			</Button>
