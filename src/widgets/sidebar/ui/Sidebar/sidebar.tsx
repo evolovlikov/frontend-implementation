@@ -15,12 +15,12 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
-	const [collapsed, setCollapsed] = useState(false);
+	const [collapsed, setCollapsed] = useState<boolean>(false);
 	const {t} = useTranslation();
 
 	const onToggle = () => {
-		setCollapsed((prev) => !prev);
-	};
+        setCollapsed((prev) => !prev);
+    };
 
 	return (
 		<div data-testid="sidebar" className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [className])}>

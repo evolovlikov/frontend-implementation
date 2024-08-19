@@ -36,6 +36,8 @@ module.exports = {
 		'no-underscore-dangle': 'off',
 		'object-curly-spacing': 'off',
 		'no-tabs': ['error', {allowIndentationTabs: true}],
+		'jsx-a11y/click-events-have-key-events': 'off',
+		'jsx-a11y/no-static-element-interactions': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,
