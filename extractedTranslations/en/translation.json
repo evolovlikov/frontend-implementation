@@ -11,6 +11,8 @@
       "'\n\t\t\t\t)}\n\t\t\t</Modal>\n\t\t</div>\n\t);\n};\n": "'\n\t\t\t\t)}\n\t\t\t</Modal>\n\t\t</div>\n\t);\n};\n"
     }
   },
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "throw error",
   "Войти": "Войти",
   "Главная": "",
