@@ -38,6 +38,7 @@ module.exports = {
 		'no-tabs': ['error', {allowIndentationTabs: true}],
 		'jsx-a11y/click-events-have-key-events': 'off',
 		'jsx-a11y/no-static-element-interactions': 'off',
+		'no-param-reassign': 'off',
 	},
 	globals: {
 		__IS_DEV__: true,

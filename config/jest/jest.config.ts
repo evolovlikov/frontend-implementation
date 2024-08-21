@@ -6,16 +6,9 @@
 import path from 'path';
 
 export default {
-	// All imported modules in your tests should be mocked automatically
-	// automock: false,
-
-	// Stop running tests after `n` failures
-	// bail: 0,
-
-	// The directory where Jest should store its cached dependency information
-	// cacheDirectory: "C:\\Users\\tim\\AppData\\Local\\Temp\\jest",
-
-	// Automatically clear mock calls, instances and results before every test
+	globals: {
+		__IS_DEV__: true,
+	},
 	clearMocks: true,
 	testEnvironment: 'jsdom',
 	coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
@@ -27,13 +20,11 @@ export default {
 	],
 	rootDir: '../../',
 	setupFilesAfterEnv: ['<rootDir>config/jest/setup-tests.ts'],
-	modulePaths: [
-        '<rootDir>src',
-    ],
+	modulePaths: ['<rootDir>src'],
 	moduleNameMapper: {
-        '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jest-empty-component.tsx'),
-    },
+		'\\.s?css$': 'identity-obj-proxy',
+		'\\.svg': path.resolve(__dirname, 'jest-empty-component.tsx'),
+	},
 	// Indicates whether the coverage information should be collected while executing the test
 	// collectCoverage: false,
 
@@ -177,14 +168,14 @@ export default {
 	// transform: undefined,
 
 	// An array of regexp pattern strings that are matched against all source file paths,
-    // matched files will skip transformation
+	// matched files will skip transformation
 	// transformIgnorePatterns: [
 	//   "\\\\node_modules\\\\",
 	//   "\\.pnp\\.[^\\\\]+$"
 	// ],
 
 	// An array of regexp pattern strings that are matched against all modules before the module
-    // loader will automatically return a mock for them
+	// loader will automatically return a mock for them
 	// unmockedModulePathPatterns: undefined,
 
 	// Indicates whether each individual test should be reported during the run
