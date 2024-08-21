@@ -1,19 +1,9 @@
 {
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
-    " \n\t\t\t\t\tAliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus \n\t\t\t\t\tquis saepe sunt totam": {
-      "": ""
-    },
-    " \n\t\t\t\t\tAliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
-      "": ""
-    },
-    " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
-      "": "",
-      "'\n\t\t\t\t)}\n\t\t\t</Modal>\n\t\t</div>\n\t);\n};\n": "'\n\t\t\t\t)}\n\t\t\t</Modal>\n\t\t</div>\n\t);\n};\n"
-    }
-  },
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
