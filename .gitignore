@@ -1,11 +1,6 @@
-# Packages
-node_modules
-
-# Build
 /build
-
-.DS_Store
-
+node_modules
+.idea
 /storybook-static
 .loki/report.html
 .loki/report.json

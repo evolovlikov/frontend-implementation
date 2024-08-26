@@ -1,4 +1,4 @@
-.modal {
+.Modal {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -38,7 +38,7 @@
     }
 }
 
-.is-closing {
+.isClosing {
     .content {
         transform: scale(0.2);
     }

@@ -1,6 +1,6 @@
 export interface User {
-    is: string;
-    usernme: string;
+    id: string;
+    username: string;
 }
 
 export interface UserSchema {
