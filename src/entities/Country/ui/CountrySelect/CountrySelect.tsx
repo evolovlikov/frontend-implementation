@@ -19,9 +19,7 @@ const options = [
 	{value: Country.Ukraine, content: Country.Ukraine},
 ];
 
-export const CountrySelect = memo(({
-className, value, onChange, readonly
-}: CountrySelectProps) => {
+export const CountrySelect = memo(({className, value, onChange, readonly}: CountrySelectProps) => {
 	const {t} = useTranslation();
 
 	const onChangeHandler = useCallback(
