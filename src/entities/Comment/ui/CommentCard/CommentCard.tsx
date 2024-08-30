@@ -1,5 +1,5 @@
 import {classNames} from 'shared/lib/classNames/classNames';
-import {memo} from 'react';
+import {memo, useCallback} from 'react';
 import {Avatar} from 'shared/ui/Avatar/Avatar';
 import {Text, TextSize} from 'shared/ui/Text/Text';
 import {Skeleton} from 'shared/ui/Skeleton/Skeleton';
