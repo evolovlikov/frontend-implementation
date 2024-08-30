@@ -10,7 +10,7 @@ import {NavigateOptions} from 'react-router';
 import {ArticleDetailsSchema} from 'entities/Article';
 import {ArticleDetailsCommentsSchema} from 'pages/ArticleDetailsPage';
 import {AddCommentFormSchema} from 'features/addCommentForm';
-import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import {ArticlesPageSchema} from 'pages/ArticlesPage';
 
 export interface StateSchema {
 	counter: CounterSchema;
