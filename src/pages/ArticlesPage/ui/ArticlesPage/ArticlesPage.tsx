@@ -18,6 +18,7 @@ import {
 	getArticlesPageNum,
 	getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 
 interface ArticlesPageProps {
 	className?: string;
@@ -56,8 +57,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 		);
 	});
 
+	useInitialEffect(() => {
+        dispatch(initArticlesPage());
+    });
+
 	return (
-		<DynamicModuleLoader reducers={reducers}>
+		<DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
 			<Page onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlesPage, {}, [className])}>
 				<ArticleViewSelector view={view} onViewClick={onChangeView} />
 				<ArticleList isLoading={isLoading} view={view} articles={articles} />
