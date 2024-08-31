@@ -25,13 +25,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
 	const {t} = useTranslation();
 
 	const renderArticle = (article: Article) => (
-		<ArticleListItem
-			article={article}
-			view={view}
-			className={cls.card}
-			key={article.id}
-			target={target}
-		/>
+		<ArticleListItem article={article} view={view} className={cls.card} key={article.id} target={target} />
 	);
 
 	if (!isLoading && !articles.length) {

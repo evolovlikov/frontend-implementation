@@ -22,13 +22,15 @@ import {
 	getArticleRecommendations,
 } from '../../model/slices/articleDetailsPageRecommendationsSlice';
 import {getArticleRecommendationsIsLoading} from '../../model/selectors/recommendations';
+import {fetchArticleRecommendations} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import {articleDetailsPageReducer} from '../../model/slices';
 
 interface ArticleDetailsPageProps {
 	className?: string;
 }
 
 const reducers: ReducersList = {
-	articleDetailsComments: articleDetailsCommentsReducer,
+	articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
@@ -38,10 +40,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 	const dispatch = useDispatch();
 	const comments = useSelector(getArticleComments.selectAll);
 	const recommendations = useSelector(getArticleRecommendations.selectAll);
-
 	const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 	const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
-
 	const navigate = useNavigate();
 
 	const onBackToList = useCallback(() => {
@@ -57,6 +57,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
 	useInitialEffect(() => {
 		dispatch(fetchCommentsByArticleId(id));
+		dispatch(fetchArticleRecommendations());
 	});
 
 	if (!id) {
@@ -77,7 +78,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 					className={cls.recommendations}
 					target="_blank"
 				/>
-				<Text className={cls.commentTitle} title={t('Комментарии')} />
+				<Text size={TextSize.L} className={cls.commentTitle} title={t('Комментарии')} />
 				<AddCommentForm onSendComment={onSendComment} />
 				<CommentList isLoading={commentsIsLoading} comments={comments} />
 			</Page>
