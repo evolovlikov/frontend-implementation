@@ -8,7 +8,7 @@ import {AxiosInstance} from 'axios';
 import {To} from 'history';
 import {NavigateOptions} from 'react-router';
 import {ArticleDetailsSchema} from 'entities/Article';
-import {ArticleDetailsCommentsSchema} from 'pages/ArticleDetailsPage';
+import {ArticleDetailsCommentsSchema, ArticleDetailsPageSchema} from 'pages/ArticleDetailsPage';
 import {AddCommentFormSchema} from 'features/addCommentForm';
 import {ArticlesPageSchema} from 'pages/ArticlesPage';
 import {UISchema} from 'features/UI';
@@ -23,6 +23,7 @@ export interface StateSchema {
 	profile?: ProfileSchema;
 	articleDetails?: ArticleDetailsSchema;
 	articleDetailsComments?: ArticleDetailsCommentsSchema;
+	articleDetailsPage?: ArticleDetailsPageSchema;
 	addCommentForm?: AddCommentFormSchema;
 	articlesPage?: ArticlesPageSchema;
 }
