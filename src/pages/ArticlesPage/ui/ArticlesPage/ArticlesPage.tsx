@@ -6,7 +6,7 @@ import {DynamicModuleLoader, ReducersList} from 'shared/lib/components/DynamicMo
 import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {useDispatch, useSelector} from 'react-redux';
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {Page} from 'shared/ui/Page/Page';
+import {Page} from 'widgets/Page/Page';
 import {fetchNextArticlesPage} from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {fetchArticlesList} from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {articlesPageActions, articlesPageReducer, getArticles} from '../../model/slices/articlesPageSlice';
@@ -18,7 +18,7 @@ import {
 	getArticlesPageNum,
 	getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
-import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
+import {initArticlesPage} from '../../model/services/initArticlesPage/initArticlesPage';
 
 interface ArticlesPageProps {
 	className?: string;
@@ -58,8 +58,8 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 	});
 
 	useInitialEffect(() => {
-        dispatch(initArticlesPage());
-    });
+		dispatch(initArticlesPage());
+	});
 
 	return (
 		<DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
