@@ -5,8 +5,8 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 	const reducers = {...initialReducers};
 
 	let combinedReducer = combineReducers(reducers);
-	let keysToRemove: Array<StateSchemaKey> = [];
 
+	let keysToRemove: Array<StateSchemaKey> = [];
 	const mountedReducers: MountedReducers = {};
 
 	return {
@@ -38,6 +38,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 			delete reducers[key];
 			keysToRemove.push(key);
 			mountedReducers[key] = false;
+
 			combinedReducer = combineReducers(reducers);
 		},
 	};
