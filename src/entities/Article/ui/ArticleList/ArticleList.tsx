@@ -23,9 +23,7 @@ const getSkeletons = (view: ArticleView) =>
 		.map((item, index) => <ArticleListItemSkeleton className={cls.card} key={index} view={view} />);
 
 export const ArticleList = memo((props: ArticleListProps) => {
-	const {
-className, articles, view = ArticleView.SMALL, isLoading, target
-} = props;
+	const {className, articles, view = ArticleView.SMALL, isLoading, target} = props;
 	const {t} = useTranslation();
 
 	const isBig = view === ArticleView.BIG;
@@ -33,9 +31,7 @@ className, articles, view = ArticleView.SMALL, isLoading, target
 	const itemsPerRow = isBig ? 1 : 3;
 	const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
 
-	const rowRender = ({
-index, isScrolling, key, style
-}: ListRowProps) => {
+	const rowRender = ({index, isScrolling, key, style}: ListRowProps) => {
 		const items = [];
 		const fromIndex = index * itemsPerRow;
 		const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
@@ -69,9 +65,7 @@ index, isScrolling, key, style
 
 	return (
 		<WindowScroller scrollElement={document.getElementById(PAGE_ID) as Element}>
-			{({
-height, width, registerChild, onChildScroll, isScrolling, scrollTop
-}) => (
+			{({height, width, registerChild, onChildScroll, isScrolling, scrollTop}) => (
 				<div ref={registerChild} className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
 					<List
 						height={height ?? 700}
