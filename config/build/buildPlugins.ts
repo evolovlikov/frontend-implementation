@@ -22,10 +22,8 @@ export function buildPlugins({paths, isDev, apiUrl, project}: BuildOptions): web
 			__PROJECT__: JSON.stringify(project),
 		}),
 		new CopyPlugin({
-            patterns: [
-                { from: paths.locales, to: paths.buildLocales },
-            ],
-        }),
+			patterns: [{from: paths.locales, to: paths.buildLocales}],
+		}),
 	];
 
 	if (isDev) {
