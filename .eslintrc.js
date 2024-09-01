@@ -13,7 +13,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+	plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'webgeny-plugin-v5'],
 	rules: {
 		'react/jsx-indent': 'off',
 		'react/jsx-indent-props': 'off',
@@ -33,6 +33,7 @@ module.exports = {
 		'no-underscore-dangle': 'off',
 		'no-tabs': 'off',
 		'implicit-arrow-linebreak': 'off',
+		'webgeny-plugin-v5/path-checker': 'error',
 		'i18next/no-literal-string': [
 			'error',
 			{
