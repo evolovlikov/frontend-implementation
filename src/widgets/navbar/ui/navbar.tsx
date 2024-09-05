@@ -41,7 +41,7 @@ export const Navbar = memo(({className}: NavbarProps) => {
 	if (authData) {
 		return (
 			<header className={classNames(cls.Navbar, {}, [className])}>
-				<Text className={cls.appName} title={t('Евгений Воловликов')} theme={TextTheme.INVERTED} />
+				<Text className={cls.appName} title={t('Ulbi TV App')} theme={TextTheme.INVERTED} />
 				<AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY} className={cls.createBtn}>
 					{t('Создать статью')}
 				</AppLink>
@@ -54,7 +54,7 @@ export const Navbar = memo(({className}: NavbarProps) => {
 									{
 										content: t('Админка'),
 										href: RoutePath.admin_panel,
-									}, // eslint-disable-next-line no-mixed-spaces-and-tabs
+									},
 							  ]
 							: []),
 						{
