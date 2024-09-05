@@ -7,7 +7,6 @@ import {DynamicModuleLoader, ReducersList} from 'shared/lib/components/DynamicMo
 import {Page} from 'widgets/Page/Page';
 import {VStack} from 'shared/ui/Stack';
 import {ArticleRecommendationsList} from 'features/articleRecommendationsList';
-import {Text, TextSize} from 'shared/ui/Text/Text';
 import {ArticleDetailsComments} from '../ArticleDetailsComments/ArticleDetailsComments';
 import cls from './ArticleDetailsPage.module.scss';
 import {articleDetailsPageReducer} from '../../model/slices';
@@ -37,7 +36,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 					<ArticleDetailsPageHeader />
 					<ArticleDetails id={id} />
 					<ArticleRecommendationsList />
-					<Text size={TextSize.L} className={cls.commentTitle} title={t('Комментарии')} />
 					<ArticleDetailsComments id={id} />
 				</VStack>
 			</Page>
