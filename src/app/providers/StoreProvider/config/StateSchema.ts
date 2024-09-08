@@ -4,6 +4,7 @@ import {LoginSchema} from 'features/AuthByUsername';
 import {AnyAction, EnhancedStore, Reducer, ReducersMapObject} from '@reduxjs/toolkit';
 import {CombinedState} from 'redux';
 import {AxiosInstance} from 'axios';
+import {To} from 'history';
 import {NavigateOptions} from 'react-router';
 import {ArticleDetailsSchema} from 'entities/Article';
 import {
