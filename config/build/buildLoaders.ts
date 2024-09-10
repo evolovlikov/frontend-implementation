@@ -18,9 +18,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
 	// Если не используем тайпскрипт - нужен babel-loader
 	// const typescriptLoader = {
-	// 	test: /\.tsx?$/,
-	// 	use: 'ts-loader',
-	// 	exclude: /node_modules/,
+	//     test: /\.tsx?$/,
+	//     use: 'ts-loader',
+	//     exclude: /node_modules/,
 	// };
 
 	const fileLoader = {
