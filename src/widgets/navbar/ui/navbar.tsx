@@ -13,6 +13,8 @@ import {Avatar} from 'shared/ui/Avatar/Avatar';
 import {HStack} from 'shared/ui/Stack';
 import {NotificationButton} from 'features/notificationButton';
 import {AvatarDropdown} from 'features/avatarDropdown';
+import {Drawer} from 'shared/ui/Drawer/Drawer';
+import {NotificationList} from 'entities/Notification';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -35,7 +37,7 @@ export const Navbar = memo(({className}: NavbarProps) => {
 	if (authData) {
 		return (
 			<header className={classNames(cls.Navbar, {}, [className])}>
-				<Text className={cls.appName} title={t('Воловликов Евгений')} theme={TextTheme.INVERTED} />
+				<Text className={cls.appName} title={t('Ulbi TV App')} theme={TextTheme.INVERTED} />
 				<AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY} className={cls.createBtn}>
 					{t('Создать статью')}
 				</AppLink>

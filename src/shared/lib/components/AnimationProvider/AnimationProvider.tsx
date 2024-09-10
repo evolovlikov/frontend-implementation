@@ -37,6 +37,7 @@ export const AnimationProvider = ({children}: {children: ReactNode}) => {
 		() => ({
 			Gesture: GestureRef.current,
 			Spring: SpringRef.current,
+			isLoaded,
 		}),
 		[isLoaded]
 	);
